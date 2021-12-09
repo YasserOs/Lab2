@@ -1,0 +1,50 @@
+create repo on github
+mkdir gitLab2 on local machine 
+cd gitLab2
+git init 
+touch lab2
+git add . 
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin git@github.com:YasserOs/Lab2.git
+git push origin main
+
+git branch dev 
+git branch test
+
+git checkout dev
+touch file1
+touch file2
+git add .
+git commit -m "created file 1 & 2"
+git push origin dev
+
+git checkout test
+git push origin test
+
+git checkout main
+git merge dev
+git push origin main
+
+====================
+
+to delete a repo remotely :
+git push origin :dev
+
+locally :
+git branch -d newbranch
+
+==============
+creating an annotated tag with v1.4:
+git tag -a v1.4 -m " Version 1.4 "
+git push origin v1.4
+
+to list tags :
+git tag
+
+to delete tags locally :
+git taf -d v1.4
+
+remotely : 
+git push origin :refs/tags/v1.4
+
